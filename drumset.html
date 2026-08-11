@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Drumset</title>
+  <style>
+
+  body {
+    background-color: lightyellow;
+    color: black;
+    font-family: Futura, "Avenir Next", sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+  }
+
+
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  a {
+    font-size: 18px;
+    color: black;
+  }
+
+
+</style>
+</head>
+
+<body>
+
+  <h1>Cat Drumset</h1>
+
+  <a href="index.html">Back to Homepage</a>
+
+  <br><br>
+
+  <img id="shockcat" src="assets/shockcat.png" alt="shocked cat">
+  <img id="bababoy" src="assets/bababoy.png" alt="bababoy cat">
+  <img id="screamcat" src="assets/screamcat.png" alt="screaming cat">
+  <img id="bobocat" src="assets/bobocat.png" alt="bobo cat">
+  <img id="happycat" src="assets/happycat.png" alt="happy cat">
+  <img id="huhcat" src="assets/huhcat.png" alt="huh cat">
+  <img id="byecat" src="assets/byecat.png" alt="bye cat">
+
+  <script>
+
+    shockcat.addEventListener("click", playShockCat);
+    bababoy.addEventListener("click", playBababoy);
+
+    screamcat.addEventListener("click", playScreamCat);
+
+    bobocat.addEventListener("click", playBoboCat);
+
+    happycat.addEventListener("click", playHappyCat);
+
+    huhcat.addEventListener("click", playHuhCat);
+
+    byecat.addEventListener("click", playByeCat);
+
+    function playShockCat() {
+      let shockCatSound = new Audio("assets/shockcat.mp3");
+      shockCatSound.play();
+    }
+    function playBababoy() {
+  let bababoySound = new Audio("assets/bababoy.mp3");
+  bababoySound.play();
+}
+
+function playScreamCat() {
+  let screamCatSound = new Audio("assets/screamcat.mp3");
+  screamCatSound.play();
+}
+
+function playBoboCat() {
+  let boboCatSound = new Audio("assets/bobocat.mp3");
+  boboCatSound.play();
+}
+
+function playHappyCat() {
+  let happyCatSound = new Audio("assets/happycat.mp3");
+  happyCatSound.play();
+}
+
+function playHuhCat() {
+  let huhCatSound = new Audio("assets/huhcat.mp3");
+  huhCatSound.play();
+}
+
+function playByeCat() {
+  let byeCatSound = new Audio("assets/byecat.mp3");
+  byeCatSound.play();
+}
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>BPM Tapper</title>
+  <style>
+
+  body {
+    background-color: lightblue;
+    color: black;
+    font-family: "Century Gothic", sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 15px;
+    margin: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <h1>BPM Tapper</h1>
+
+  <button id="tapButton">Click Me</button>
+
+  <p id="result">BPM: --</p>
+
+  <script>
+
+    let clicks = [];
+
+    tapButton.addEventListener("click", getBpm);
+
+    function getBpm() {
+
+      let currentTime = new Date().getTime();
+
+      clicks.push(currentTime);
+
+      if (clicks.length >= 10) {
+
+        let totalTime = clicks[clicks.length - 1] - clicks[0];
+
+        let averageTime = totalTime / (clicks.length - 1);
+
+        let bpm = 60000 / averageTime;
+
+        result.textContent = "BPM: " + Math.round(bpm);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
