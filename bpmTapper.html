@@ -56,10 +56,12 @@
 
   <script>
 
+    // 1. SELECTING
+    let tapButton = document.querySelector("#tapButton");
+    let result = document.querySelector("#result");
     let clicks = [];
 
-    tapButton.addEventListener("click", getBpm);
-
+    // 2. FUNCTION
     function getBpm() {
 
       let currentTime = new Date().getTime();
@@ -77,6 +79,9 @@
         result.textContent = "BPM: " + Math.round(bpm);
       }
     }
+
+    // 3. LISTENER
+    tapButton.addEventListener("click", getBpm);
 
   </script>
 

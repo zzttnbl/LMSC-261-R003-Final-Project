@@ -55,52 +55,59 @@
 
   <script>
 
-    shockcat.addEventListener("click", playShockCat);
-    bababoy.addEventListener("click", playBababoy);
+    // 1. SELECTING
+    let shockCat = document.querySelector("#shockcat");
+    let bababoy = document.querySelector("#bababoy");
+    let screamCat = document.querySelector("#screamcat");
+    let boboCat = document.querySelector("#bobocat");
+    let happyCat = document.querySelector("#happycat");
+    let huhCat = document.querySelector("#huhcat");
+    let byeCat = document.querySelector("#byecat");
 
-    screamcat.addEventListener("click", playScreamCat);
-
-    bobocat.addEventListener("click", playBoboCat);
-
-    happycat.addEventListener("click", playHappyCat);
-
-    huhcat.addEventListener("click", playHuhCat);
-
-    byecat.addEventListener("click", playByeCat);
-
+    // 2. FUNCTIONS
     function playShockCat() {
       let shockCatSound = new Audio("assets/shockcat.mp3");
       shockCatSound.play();
     }
+
     function playBababoy() {
-  let bababoySound = new Audio("assets/bababoy.mp3");
-  bababoySound.play();
-}
+      let bababoySound = new Audio("assets/bababoy.mp3");
+      bababoySound.play();
+    }
 
-function playScreamCat() {
-  let screamCatSound = new Audio("assets/screamcat.mp3");
-  screamCatSound.play();
-}
+    function playScreamCat() {
+      let screamCatSound = new Audio("assets/screamcat.mp3");
+      screamCatSound.play();
+    }
 
-function playBoboCat() {
-  let boboCatSound = new Audio("assets/bobocat.mp3");
-  boboCatSound.play();
-}
+    function playBoboCat() {
+      let boboCatSound = new Audio("assets/bobocat.mp3");
+      boboCatSound.play();
+    }
 
-function playHappyCat() {
-  let happyCatSound = new Audio("assets/happycat.mp3");
-  happyCatSound.play();
-}
+    function playHappyCat() {
+      let happyCatSound = new Audio("assets/happycat.mp3");
+      happyCatSound.play();
+    }
 
-function playHuhCat() {
-  let huhCatSound = new Audio("assets/huhcat.mp3");
-  huhCatSound.play();
-}
+    function playHuhCat() {
+      let huhCatSound = new Audio("assets/huhcat.mp3");
+      huhCatSound.play();
+    }
 
-function playByeCat() {
-  let byeCatSound = new Audio("assets/byecat.mp3");
-  byeCatSound.play();
-}
+    function playByeCat() {
+      let byeCatSound = new Audio("assets/byecat.mp3");
+      byeCatSound.play();
+    }
+
+    // 3. LISTENERS
+    shockCat.addEventListener("click", playShockCat);
+    bababoy.addEventListener("click", playBababoy);
+    screamCat.addEventListener("click", playScreamCat);
+    boboCat.addEventListener("click", playBoboCat);
+    happyCat.addEventListener("click", playHappyCat);
+    huhCat.addEventListener("click", playHuhCat);
+    byeCat.addEventListener("click", playByeCat);
 
   </script>
 
