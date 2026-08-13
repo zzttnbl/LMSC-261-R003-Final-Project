@@ -65,19 +65,28 @@
     function getBpm() {
 
       let currentTime = new Date().getTime();
-
       clicks.push(currentTime);
 
       if (clicks.length >= 10) {
+        let totalInterval = 0;
 
-        let totalTime = clicks[clicks.length - 1] - clicks[0];
+        for (let i = 1; i < clicks.length; i++) {
+          totalInterval += clicks[i] - clicks[i - 1];
+        }
 
-        let averageTime = totalTime / (clicks.length - 1);
+        const averageInterval = totalInterval / (clicks.length - 1);
+        const bpm = Math.round(convert(averageInterval));
 
-        let bpm = 60000 / averageTime;
+        alert("The BPM is: " + bpm);
+        result.textContent = "BPM: " + bpm;
 
-        result.textContent = "BPM: " + Math.round(bpm);
+        clicks = [];
       }
+    }
+
+    // Takes in averageInterval and converts to BPM
+    function convert(time) {
+      return 60 / (time / 1000);
     }
 
     // 3. LISTENER
